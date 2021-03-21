@@ -1,11 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
   SafeAreaView,
@@ -26,11 +19,46 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Geolocation from '@react-native-community/geolocation';
-// eslint-disable-next-line no-unused-vars
 import loadLocalResource from 'react-native-local-resource';
+import RNFetchBlob from 'rn-fetch-blob';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
+
+  // send http request in a new thread (using native code)
+  RNFetchBlob.fetch(
+    'GET',
+    'https://homepages.cae.wisc.edu/~ece533/images/airplane.png',
+    {
+      // Authorization: 'Bearer access-token...',
+      // more headers  ..
+    },
+  )
+    .then(res => {
+      let status = res.info().status;
+
+      if (status == 200) {
+        // the conversion is done in native code
+        let base64Str = res.base64();
+        console.log('RNFetchBlob 2000');
+        console.log(base64Str);
+        // the following conversions are done in js, it's SYNC
+        let text = res.text();
+        let json = res.json();
+        console.log(text);
+        console.log(json);
+      } else {
+        // handle other status codes
+        console.log('RNFetchBlob else');
+        console.log(res);
+      }
+    })
+    // Something went wrong:
+    .catch((errorMessage, statusCode) => {
+      // error handling
+      console.log('RNFetchBlob err');
+      console.log(errorMessage);
+    });
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -55,7 +83,7 @@ const App = () => {
                 title="Press me"
                 color="#f194ff"
                 onPress={() =>
-                  Alert.alert('Button with adjusted color pressed')
+                  console.log('Button with adjusted color pressed')
                 }
               />
             </View>
