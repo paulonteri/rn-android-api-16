@@ -25,6 +25,7 @@ import loadLocalResource from 'react-native-local-resource';
 import RNFetchBlob from 'rn-fetch-blob';
 import {openSettings} from 'react-native-permissions';
 import AndroidOpenSettings from 'react-native-android-open-settings';
+import {WebView} from 'react-native-webview';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -41,7 +42,7 @@ const App = () => {
     .then(res => {
       let status = res.info().status;
 
-      if (status == 200) {
+      if (status === 200) {
         // the conversion is done in native code
         let base64Str = res.base64();
         console.log('RNFetchBlob 2000');
@@ -63,6 +64,7 @@ const App = () => {
       console.log('RNFetchBlob err');
       console.log(errorMessage);
     });
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -119,6 +121,12 @@ const App = () => {
                 <DebugInstructions />
               </Text>
             </View>
+            <WebView
+              source={{html: '<h1>Hello world</h1>'}}
+              // eslint-disable-next-line react-native/no-inline-styles
+              style={{marginTop: 20}}
+            />
+
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Learn More</Text>
               <Text style={styles.sectionDescription}>
