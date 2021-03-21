@@ -14,6 +14,7 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-local-resource": "^0.1.6",
+    "react-native-settings": "^0.2.3",
     "react-native-share": "^5.1.4",
     "rn-fetch-blob": "^0.12.0"
   },

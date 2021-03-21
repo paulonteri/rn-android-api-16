@@ -21,8 +21,17 @@ import {
 import Geolocation from '@react-native-community/geolocation';
 import loadLocalResource from 'react-native-local-resource';
 import RNFetchBlob from 'rn-fetch-blob';
+import RNSettings from 'react-native-settings';
 
 const App = () => {
+  RNSettings.getSetting(RNSettings.LOCATION_SETTING).then(result => {
+    if (result == RNSettings.ENABLED) {
+      console.log('location is enabled');
+    } else {
+      console.log('location is disabled');
+    }
+  });
+
   Geolocation.getCurrentPosition(info => console.log(info));
 
   // send http request in a new thread (using native code)
