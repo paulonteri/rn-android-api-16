@@ -9,6 +9,8 @@ import {
   StatusBar,
   Button,
   Alert,
+  Linking,
+  Platform,
 } from 'react-native';
 
 import {
@@ -21,6 +23,8 @@ import {
 import Geolocation from '@react-native-community/geolocation';
 import loadLocalResource from 'react-native-local-resource';
 import RNFetchBlob from 'rn-fetch-blob';
+import {openSettings} from 'react-native-permissions';
+import AndroidOpenSettings from 'react-native-android-open-settings';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -89,6 +93,17 @@ const App = () => {
               <Button
                 title="Open settings with react-native-permissions"
                 onPress={() => openSettings()}
+              />
+
+              <Button
+                title="Open settings with AndroidOpenSettings.locationSourceSettings()"
+                color="#f194ff"
+                onPress={() =>
+                  // Open location source settings menu
+                  Platform.OS === 'ios'
+                    ? Linking.openSettings()
+                    : AndroidOpenSettings.locationSourceSettings()
+                }
               />
             </View>
 
