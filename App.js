@@ -25,8 +25,10 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Geolocation from '@react-native-community/geolocation';
 
-const App: () => React$Node = () => {
+const App = () => {
+  Geolocation.getCurrentPosition(info => console.log(info));
   return (
     <>
       <StatusBar barStyle="dark-content" />
