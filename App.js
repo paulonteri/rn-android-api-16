@@ -14,6 +14,8 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
+  Alert,
 } from 'react-native';
 
 import {
@@ -45,7 +47,15 @@ const App: () => React$Node = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
+              <Button
+                title="Press me"
+                color="#f194ff"
+                onPress={() =>
+                  Alert.alert('Button with adjusted color pressed')
+                }
+              />
             </View>
+
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
