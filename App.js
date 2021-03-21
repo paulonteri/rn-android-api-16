@@ -26,6 +26,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Geolocation from '@react-native-community/geolocation';
+// eslint-disable-next-line no-unused-vars
+import loadLocalResource from 'react-native-local-resource';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
