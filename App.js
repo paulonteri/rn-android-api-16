@@ -83,8 +83,12 @@ const App = () => {
                 title="Press me"
                 color="#f194ff"
                 onPress={() =>
-                  console.log('Button with adjusted color pressed')
+                  Alert.alert('Button with adjusted color pressed')
                 }
+              />
+              <Button
+                title="Open settings with react-native-permissions"
+                onPress={() => openSettings()}
               />
             </View>
 

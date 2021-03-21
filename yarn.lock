@@ -5196,6 +5196,11 @@ react-native-local-resource@^0.1.6:
   resolved "https://registry.yarnpkg.com/react-native-local-resource/-/react-native-local-resource-0.1.6.tgz#9aea39488c7b3f3d107e9459d3d83c3ac707d24e"
   integrity sha512-uDT6Ig8w6WkmA7ReIUG8soBkWJ94b/d1cnFHnlEMvMPlBf6fhPHh90mVdNTTYf95oT4sL09mBN5MYFDX4hRIiQ==
 
+react-native-permissions@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.0.1.tgz#7273f7d07701974ef50bf77bb052881846a3bb91"
+  integrity sha512-loCoNEeBeLsrvITZmrkuCUEMFiuwhKuFvkWbC5Imco4bj2hUW7BVI29i8QyxkC53ydRfSR9OtbR3KQIyghWiNQ==
+
 react-native-share@^5.1.4:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-5.1.4.tgz#0b9d51f6ca724728cb0c5b3ed3a883ee54d7a11b"
