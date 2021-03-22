@@ -26,6 +26,7 @@ import RNFetchBlob from 'rn-fetch-blob';
 import {openSettings} from 'react-native-permissions';
 import AndroidOpenSettings from 'react-native-android-open-settings';
 import {WebView} from 'react-native-webview';
+import Share from 'react-native-share';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -105,6 +106,18 @@ const App = () => {
                   Platform.OS === 'ios'
                     ? Linking.openSettings()
                     : AndroidOpenSettings.locationSourceSettings()
+                }
+              />
+              <Button
+                title="react-native-share"
+                onPress={() =>
+                  Share.open({message: 'message', title: 'title'})
+                    .then(res => {
+                      console.log(res);
+                    })
+                    .catch(err => {
+                      err && console.log(err);
+                    })
                 }
               />
             </View>

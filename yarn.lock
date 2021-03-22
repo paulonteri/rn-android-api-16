@@ -5201,20 +5201,15 @@ react-native-local-resource@^0.1.6:
   resolved "https://registry.yarnpkg.com/react-native-local-resource/-/react-native-local-resource-0.1.6.tgz#9aea39488c7b3f3d107e9459d3d83c3ac707d24e"
   integrity sha512-uDT6Ig8w6WkmA7ReIUG8soBkWJ94b/d1cnFHnlEMvMPlBf6fhPHh90mVdNTTYf95oT4sL09mBN5MYFDX4hRIiQ==
 
-react-native-pell-rich-editor@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/react-native-pell-rich-editor/-/react-native-pell-rich-editor-1.7.0.tgz#dd7671f538b0e4d6dade74dcd3de406d659a0c7c"
-  integrity sha512-niFETEhkr0KZRDXDepwCTW2Z5a01hftdU/0djgqMZ2mmwbRq0sba4nGtmTbFYd04KcU7eTvbFjH19v98Dfa1nw==
-
 react-native-permissions@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.0.1.tgz#7273f7d07701974ef50bf77bb052881846a3bb91"
   integrity sha512-loCoNEeBeLsrvITZmrkuCUEMFiuwhKuFvkWbC5Imco4bj2hUW7BVI29i8QyxkC53ydRfSR9OtbR3KQIyghWiNQ==
 
-react-native-share@^5.1.4:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-5.1.4.tgz#0b9d51f6ca724728cb0c5b3ed3a883ee54d7a11b"
-  integrity sha512-/eNBTuimOmzeeBbnZkwW6hbzSZvJnhfkx5cSdQkFS45KRHekD9twP6F8QHn+zJxeJGAP+EgpVCXoA7yCrgKrhQ==
+react-native-share@^5.1.6:
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-5.1.6.tgz#050916039feaf3ccbd7f9a71cb2a15b3a4553f06"
+  integrity sha512-QwhE+hxpTY4dSm2LvuJU4aLId0+zeeg90msV4X7rE6U227N6dheQ0LHEtQdGM7ImleUIJaY1s9Zg5NbrHtPUTA==
 
 react-native-webview@^11.3.1:
   version "11.3.1"
