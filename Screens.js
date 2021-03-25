@@ -7,6 +7,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useIsFocused} from '@react-navigation/native';
+import SimpleTests from './SimpleTests';
 
 function HomeScreen0(props) {
   const isFocused = useIsFocused();
@@ -120,7 +121,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={SimpleTests} />
+        <Tab.Screen name="Hom2" component={HomeScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
         <Tab.Screen name="Stacks" component={Stacks} />
       </Tab.Navigator>
