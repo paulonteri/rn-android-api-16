@@ -27,6 +27,7 @@ import AndroidOpenSettings from 'react-native-android-open-settings';
 import {WebView} from 'react-native-webview';
 import Share from 'react-native-share';
 import CameraView from './CameraView';
+import PushNotification from 'react-native-push-notification';
 
 const SimpleTests = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -122,6 +123,22 @@ const SimpleTests = () => {
                     .catch(err => {
                       err && console.log(err);
                     })
+                }
+              />
+              <Button
+                title="Push notification"
+                color="#f194ff"
+                onPress={() =>
+                  PushNotification.localNotification({
+                    /* Android Only Properties */
+                    channelId: 'your-channel-id', // (required) channelId, if the channel doesn't exist, notification will not trigger.
+                    actions: ['Yes', 'No'], // (Android only) See the doc for notification actions to know more
+
+                    /* iOS and Android properties */
+
+                    title: 'My Notification Title', // (optional)
+                    message: 'My Notification Message', // (required)
+                  })
                 }
               />
             </View>
