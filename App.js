@@ -28,6 +28,7 @@ import AndroidOpenSettings from 'react-native-android-open-settings';
 import {WebView} from 'react-native-webview';
 import Share from 'react-native-share';
 import CameraView from './CameraView';
+import Screens from './Screens';
 
 const App = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -67,8 +68,11 @@ const App = () => {
       console.log(errorMessage);
     });
 
-  if (true) {
+  if (false) {
     return <CameraView />;
+  }
+  if (true) {
+    return <Screens />;
   }
 
   return (
