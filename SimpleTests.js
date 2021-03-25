@@ -28,6 +28,7 @@ import {WebView} from 'react-native-webview';
 import Share from 'react-native-share';
 import CameraView from './CameraView';
 import PushNotification from 'react-native-push-notification';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SimpleTests = () => {
   Geolocation.getCurrentPosition(info => console.log(info));
@@ -140,6 +141,10 @@ const SimpleTests = () => {
                     message: 'My Notification Message', // (required)
                   })
                 }
+              />
+              <Button
+                title="AsyncStorage"
+                onPress={() => AsyncStorage.setItem('@storage_Key', 'value')}
               />
             </View>
 

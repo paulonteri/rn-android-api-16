@@ -12,6 +12,7 @@
     "clean-install-android": "cd android && ./gradlew clean && yarn install-android && cd .."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "5.0.0",
